@@ -75,7 +75,7 @@ def download_file(source, dest, logger=None):
         logger.error(e)
 
 def is_valid_string(input_str):
-    return isinstance(input_str, str) and len(input_str) > 0
+    return isinstance(input_str, str) and len(input_str) > 0 and input_str not in ["http://isri.cmu.edu/images/people/75px/_blank-75.jpg"]
 
 def main():
     #this script's path
