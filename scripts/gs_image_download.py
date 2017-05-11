@@ -40,7 +40,7 @@ gs_base_url = "https://scholar.google.com/"
 for doc in cursor:
     if ud.is_valid_string(doc['gs_image_url']) and \
         doc['gs_image_url'] != "/citations/images/avatar_scholar_150.jpg":
-        file_name = ud.construct_file_name(ext, "gs", doc["scid"])
+        file_name = ud.construct_file_name(ext, doc["scid"], "gs")
         path = ud.construct_file_path(repo_path, doc["scid"], file_name)
         image_url = doc['gs_image_url'].replace("view_photo", "medium_photo")
         # logger.debug(path)
